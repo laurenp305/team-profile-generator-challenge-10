@@ -3,25 +3,21 @@ const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
 //DID THIS THE SAME WAY I RAN THE INTERN TEST
 test('Tests if we can get values for engineer objects', () => {
-    expect(newEngineer.getName()).toBe('Alec');
-    expect(newEngineer.getId()).toBe('2');
-    expect(newEngineer.getEmail()).toBe('alec@fakemail.com');
-    expect(newEngineer.getGitHub()).toBe('ibealec');
+
+    const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
+
+    expect(newEngineer.getName()).toEqual(expect.any(String));
 } );
 
-test('Tests if we can get the name from getName()', () => {
-    expect(newEngineer.getName()).toBe('Alec');
-});
+test('Tests if we can get Github username gitHub') , () => {
 
-test('Tests if we can get the id from getId()', () => {
-    expect(newEngineer.getId()).toBe('2');
-});
+    const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
-test('Tests if we can get the email from getEmail()', () => {
-    expect(newEngineer.getEmail()).toBe('alec@fakemail');
-} );
-
-test('Tests if we can get employees role from getRole') , () => {
-    expect(newEngineer.getGitHub()).toBe('ibealec');
+    expect(newEngineer.getGitHub()).toEqual(expect.stringContaining(engineer.github.toString()));
 }
 
+test('Tests if we can get the role from getRole') , () => {
+    const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
+
+    expect(newEngineer.getRole()).toEqual(expect.stringContaining('Engineer'));
+}
