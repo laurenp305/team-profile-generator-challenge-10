@@ -6,7 +6,7 @@ test('Tests if we can get values for engineer objects', () => {
 
     const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
-    expect(newEngineer.getName()).toEqual(expect.any(String));
+    expect(newEngineer.getGitHub()).toEqual(expect.any(String));
 } );
 
 test('Tests if we can get Github username gitHub') , () => {
