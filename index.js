@@ -1,8 +1,8 @@
 //variables for different roles
 const inquirer = require("inquirer");
-const Manager = require("./lib/manager");
-const Intern = require("./lib/intern");
-const Engineer = require("./lib/engineer");
+const Manager = require("./lib/Manager.js");
+const Intern = require("./lib/Intern.js");
+const Engineer = require("./lib/Engineer.js");
 
 const generateHTML = require("./src/createTeam.js");
 const fs = require("fs");

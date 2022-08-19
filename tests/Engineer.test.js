@@ -1,4 +1,4 @@
-const Engineer = require('../lib/Engineer');
+const Engineer = require('../lib/Engineer.js');
 const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
 //DID THIS THE SAME WAY I RAN THE INTERN TEST

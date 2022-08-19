@@ -1,7 +1,7 @@
 //Import classes
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
+const Manager = require("./lib/Manager.js");
+const Engineer = require("./lib/Engineer.js");
+const Intern = require("./lib/Intern.js");
 
 function createManagerHtml(manager) {
     return `
