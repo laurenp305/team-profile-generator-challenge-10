@@ -7,8 +7,9 @@ const engineer = require("./lib/engineer");
 const generateHTML = require("./src/generateHTML.js");
 const fs = require("fs");
 const path = require("path");
+const Intern = require("./lib/intern");
 const outputDir = path.resolve(__dirname, "output");
-const outputPath = path.join(outputdir, "team.html");
+const outputPath = path.join(outputDir, "index.html");
 const team = [];
 
 const createManager = () => {
@@ -151,7 +152,7 @@ return inquirer.prompt([
 
 const createIntern = () => {
     console.log('Add new intern');
-};
+
 
 return inquirer.prompt([
     {
@@ -187,7 +188,32 @@ return inquirer.prompt([
             return true;
             }
         },
-    {
-        type: "input",
-        name: 
+        {
+            type: "input",
+            name: "school",
+            message: "Enter the intern's school/university, please.",
+            validate: internSchool => {
+                if (internSchool === "") {
+                    return "Please enter the intern's school/university.";
+                }
+                return true;
+                }
+            },
+]).then(answers => {
+    console.log(answers);
+    const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+    team.push(intern);
+    promptMenu();
+})
+};
+
+const createTeam = () => {
+    console.log ('Team created!');
+
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir)
     }
+    fs.writeFileSync(outputPath, generateSite(team), "utf-8");
+}
+
+promptManager();
