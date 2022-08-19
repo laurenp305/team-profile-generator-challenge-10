@@ -1,0 +1,26 @@
+{
+  "name": "challenge-10",
+  "version": "8.2.4",
+  "description": "A node application that uses command line input about members of an engineering team and generates an HTML file that displays the information and team members.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenp305/team-profile-generator-challenge-10.git"
+  },
+  "author": "Lauren Pineiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurenp305/team-profile-generator-challenge-10/issues"
+  },
+  "homepage": "https://github.com/laurenp305/team-profile-generator-challenge-10#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
