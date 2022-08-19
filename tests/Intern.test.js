@@ -1,4 +1,4 @@
-const Intern = require('../lib/Intern.js');
+const Intern = require('../lib/Intern');
 
 //DID THIS THE SAME WAY I RAN THE EMPLOYEE TEST
 test('Tests if we can get values for intern objects', () => {

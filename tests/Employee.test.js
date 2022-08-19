@@ -1,4 +1,4 @@
-const Employee = require('./lib/Employee.js');
+const Employee = require('../lib/Employee');
 
 //creates new employee object
 const newEmployee = new Employee('Jared', '1', 'jared@fakemail.com');

@@ -1,4 +1,4 @@
-const Manager = require('../lib/Manager.js');
+const Manager = require('../lib/Manager');
 const newManager = new Manager('Jared', '1','jared@fakemail.com', '1');
 
 //DID THIS THE SAME WAY I RAN THE EMPLOYEE & INTERN TESTS
