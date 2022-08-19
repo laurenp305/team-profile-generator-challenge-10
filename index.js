@@ -1,15 +1,14 @@
 //variables for different roles
 const inquirer = require("inquirer");
-const manager = require("./lib/manager");
-const intern = require("./lib/intern");
-const engineer = require("./lib/engineer");
+const Manager = require("./lib/manager");
+const Intern = require("./lib/intern");
+const Engineer = require("./lib/engineer");
 
-const generateHTML = require("./src/generateHTML.js");
+const generateHTML = require("./src/generateHTML");
 const fs = require("fs");
 const path = require("path");
-const Intern = require("./lib/intern");
 const outputDir = path.resolve(__dirname, "output");
-const outputPath = path.join(outputDir, "index.html");
+const outputPath = path.join(outputDir, "team.html");
 const team = [];
 
 const createManager = () => {
@@ -61,14 +60,9 @@ const createManager = () => {
     ]).then(answers => {
         const manager = new manager(answers.name, answers.id, answers.email, answers.officeNumber);
         team.push(manager);
-        console.log(team);
         promptMenu();
-    }).then(() => {
-        createTeam();
-    }).catch(err => {
-        console.log(err);
-    }
-    );
+    })
+}
 
     const promptMenu = () => {
         return inquirer.prompt([
@@ -78,8 +72,8 @@ const createManager = () => {
                 message: "Please select an option: ",
                 choices: ["Add engineer", "Add intern", "Build my team"]  
             }
-        ]).then(answers => {
-            switch (answers.menu) {
+        ]).then(userAnswer => {
+            switch (userAnswer.menu) {
                 case "Add engineer":
                     createEngineer();
                     break;
@@ -95,7 +89,7 @@ const createManager = () => {
 
 const createEngineer = () => {
     console.log('Add new engineer');
-};
+
 
 return inquirer.prompt([
     {
@@ -148,8 +142,7 @@ return inquirer.prompt([
     team.push(Engineer);
     promptMenu();
 })
-}; 
-
+}
 const createIntern = () => {
     console.log('Add new intern');
 
@@ -199,17 +192,18 @@ return inquirer.prompt([
                 return true;
                 }
             },
-]).then(answers => {
-    console.log(answers);
-    const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-    team.push(intern);
-    promptMenu();
-})
-};
+        ]).then(answers => {
+            console.log(answers);
+            const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
+            team.push(intern);
+            promptMenu();
+        })
+    };    
 
 const createTeam = () => {
     console.log ('Team created!');
 
+// this creates the output directory if the path doesn't already exist
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir)
     }
