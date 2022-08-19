@@ -4,7 +4,7 @@ const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
 const Engineer = require("./lib/engineer");
 
-const generateHTML = require("./src/generateHTML");
+const generateHTML = require("./src/createTeam.js");
 const fs = require("fs");
 const path = require("path");
 const outputDir = path.resolve(__dirname, "output");
