@@ -9,20 +9,20 @@ test('This is a test to see if we can get the value for the employee object', ()
     expect(newEmployee.getEmail()).toBe(expect.any(String))
 })
 
-test('Test to see if we can get the name from getName()', () => {
+test('Test to see if we can get the name from getName', () => {
     expect(newEmployee.getName()).toEqual(expect.any(String))
 })
 
-test('Test to see if we can get the id from getId()', () => {
+test('Test to see if we can get the id from getId', () => {
     expect(newEmployee.getId()).toEqual(expect.any(Number))
 })
 
-test('Test to see if we can get the email from getEmail()', () => {
+test('Test to see if we can get the email from getEmail', () => {
     expect(newEmployee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()))
 })
 
-test('Test to see if we can get employees role from getRole') , () => {
+test('Test to see if we can get employees role from getRole', () => {
     expect(newEmployee.getRole()).toEqual("Employee")
-}
+})
 
 
