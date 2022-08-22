@@ -14,7 +14,7 @@ test('Tests if we can get Github username gitHub' , () => {
 
     const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
-    expect(newEngineer.getGitHub()).toEqual(expect.stringContaining(engineer.github.toString()));
+    expect(newEngineer.getGitHub()).toEqual(expect.stringContaining(newEngineer.github.toString()));
 })
 
 test('Tests if we can get the role from getRole' , () => {
