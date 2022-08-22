@@ -18,7 +18,7 @@ test('Test to see if we can get the id from getId', () => {
 })
 
 test('Test to see if we can get the email from getEmail', () => {
-    expect(newEmployee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()))
+    expect(newEmployee.getEmail()).toEqual(expect.stringContaining(newEmployee.email.toString()))
 })
 
 test('Test to see if we can get employees role from getRole', () => {
