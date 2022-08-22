@@ -10,15 +10,15 @@ test('Tests if we can get values for engineer objects', () => {
     expect(newEngineer.getGitHub()).toEqual(expect.any(String));
 } )
 
-test('Tests if we can get Github username gitHub') , () => {
+test('Tests if we can get Github username gitHub' , () => {
 
     const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
     expect(newEngineer.getGitHub()).toEqual(expect.stringContaining(engineer.github.toString()));
-}
+})
 
-test('Tests if we can get the role from getRole') , () => {
+test('Tests if we can get the role from getRole' , () => {
     const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
 
     expect(newEngineer.getRole()).toEqual(expect.stringContaining('Engineer'));
-}
+})
