@@ -12,15 +12,22 @@ test('Tests if we can get constructor values for engineer objects', () => {
     
 } )
 
-test('Tests if we can get Github username gitHub' , () => {
-
-    const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
-
-    expect(newEngineer.getGitHub()).toEqual(expect.stringContaining(newEngineer.github.toString()));
+//Test for name
+test('Tests for name from getName method', () => {
+    expect(newEngineer.getName()).toBe('Alec');
 })
 
-test('Tests if we can get the role from getRole' , () => {
-    const newEngineer = new Engineer('Alec', '2','alec@fakemail.com', 'ibealec');
+//Test for ID
+test('Tests for ID from getID method', () => {
+    expect(newEngineer.getId()).toBe('2');
+})
 
-    expect(newEngineer.getRole()).toEqual(expect.stringContaining('Engineer'));
+//Test for email
+test('Tests for email from getEmail method', () => {
+    expect(newEngineer.getEmail()).toBe('alec@fakemail.com');
+})
+
+//Test for gitHub username
+test('Tests for gitHub from getGitHub method', () => {
+    expect(newEngineer.getGitHub()).toBe('ibealec');
 })
