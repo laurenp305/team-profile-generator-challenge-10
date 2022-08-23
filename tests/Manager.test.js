@@ -14,3 +14,18 @@ test('Test for name with getName() method', () => {
     expect(newManager.getName()).toBe('Jared');
 })
 
+test('Test for name with getId() method', () => {
+    expect(newManager.getId()).toBe('1');
+})
+
+test('Test for name with getEmail() method', () => {
+    expect(newManager.getEmail()).toBe('jared@fakemail.com');
+})
+
+test('Test for name with getOfficeNumber() method', () => {
+    expect(newManager.getOfficeNumber()).toBe('1');
+})
+
+test('Test for name with getRole() method', () => {
+    expect(newManager.geRole()).toBe("Manager");
+})
