@@ -8,7 +8,7 @@ test('Tests if we can get values for intern objects', () => {
     expect(newIntern.name).toBe('John');
     expect(newIntern.id).toBe('5');
     expect(newIntern.email).toBe('john@fakemail.com');
-    expect(newIntern.school).toBe('2University');
+    expect(newIntern.school).toBe("2University");
 
 } )
 //Tests for name
@@ -28,5 +28,5 @@ test('Tests for name with getEmail() method', () => {
 
 //Tests for school
 test('Tests for name with getSchool() method', () => {
-    expect(newIntern.getEmail()).toBe('2University');
+    expect(newIntern.getSchool()).toBe("2University");
 })
