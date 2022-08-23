@@ -27,5 +27,5 @@ test('Test for name with getOfficeNumber() method', () => {
 })
 
 test('Test for name with getRole() method', () => {
-    expect(newManager.geRole()).toBe("Manager");
+    expect(newManager.getRole()).toBe("Manager");
 })
