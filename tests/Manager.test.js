@@ -12,5 +12,5 @@ test('Test to see if we can get the role', () => {
 
     const newManager = new Manager('Jared', 1,'jared@fakemail.com', 1);
 
-    expect(newManager.getRole()).toEqual(expect.stringContaining(newManager));
+    expect(newManager.getRole()).toEqual(expect.stringContaining("Manager"));
 })
