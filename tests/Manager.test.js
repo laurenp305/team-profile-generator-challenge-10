@@ -1,12 +1,12 @@
 const Manager = require('../lib/Manager');
 const newManager = new Manager('Jared', '1','jared@fakemail.com', '1');
 
-//DID THIS THE SAME WAY I RAN THE EMPLOYEE & INTERN TESTS
-test('Test if we can get values for manager objects', () => {
+//Office number test for manager
+test("Set office number via constructor"), () => {
+    const testNumber = 1;
     const newManager = new Manager('Jared', 1,'jared@fakemail.com', 1);
-
-    expect(newManager.officeNumber()).toEqual(expect.any(Number));
-} )
+    expect(newManager.officeNumber).toBe(testNumber)
+}
 
 test('Test to see if we can get the role', () => {
 
@@ -14,3 +14,4 @@ test('Test to see if we can get the role', () => {
 
     expect(newManager.getRole()).toEqual(expect.stringContaining("Manager"));
 })
+
