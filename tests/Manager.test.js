@@ -1,5 +1,4 @@
 const Manager = require('../lib/Manager');
-const newManager = new Manager('Jared', '1','jared@fakemail.com', '1');
 
 //Office number test for manager
 test("Set office number via constructor", () => {
@@ -10,6 +9,7 @@ test("Set office number via constructor", () => {
     expect(newManager.officeNumber).toBe(testNumber)
 })
 
+//Test to see if we could get the role of the employee
 test("Test to see if we can get the role", () => {
     const testRole = "Manager";
 
@@ -18,4 +18,12 @@ test("Test to see if we can get the role", () => {
     expect(newManager.getRole()).toBe(testRole);
 })
 
+//Test to see if the office number actually populates
+test("Get office number", () => {
+    const testNumber = 1;
+
+    const newManager = new Manager('Jared', 1,'jared@fakemail.com', 1);
+
+    expect(newManager.getOfficeNumber()).toBe(testNumber);
+})
 
