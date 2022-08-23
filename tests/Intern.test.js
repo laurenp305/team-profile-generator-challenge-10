@@ -21,4 +21,9 @@ test('Tests for name with getId() method', () => {
     expect(newIntern.getId()).toBe('5');
 })
 
+//Tests for email
+test('Tests for name with getEmail() method', () => {
+    expect(newIntern.getEmail()).toBe('john@fakemail.com');
+})
+
 
