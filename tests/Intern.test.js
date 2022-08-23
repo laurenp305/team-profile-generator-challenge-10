@@ -16,3 +16,9 @@ test('Tests for name with getName() method', () => {
     expect(newIntern.getName()).toBe('John');
 })
 
+//Tests for ID
+test('Tests for name with getId() method', () => {
+    expect(newIntern.getId()).toBe('5');
+})
+
+
