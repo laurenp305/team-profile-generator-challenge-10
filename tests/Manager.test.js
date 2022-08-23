@@ -10,3 +10,7 @@ test('Test if we can get values for manager objects', () => {
     expect(newManager.officeNumber).toBe('1');
 } )
 
+test('Test for name with getName() method', () => {
+    expect(newManager.getName()).toBe('Jared');
+})
+
