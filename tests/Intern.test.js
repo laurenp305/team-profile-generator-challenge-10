@@ -11,16 +11,8 @@ test('Tests if we can get values for intern objects', () => {
     expect(newIntern.school).toBe('2University');
 
 } )
-
-test('Tests if we can get values from getSchool', () => {
-
-    const newIntern = new Intern('John', '5','john@fakemail.com', '2University');
-
-    expect(newIntern.getSchool()).toEqual(expect.stringContaining(newIntern.school.toString()));
+//Tests for name
+test('Tests for name with getName() method', () => {
+    expect(newIntern.getName()).toBe('John');
 })
 
-test('Tests if we can get the role from getRole' , () => {
-    const newIntern = new Intern('John', '5','john@fakemail.com', '2University');
-
-    expect(newIntern.getRole()).toEqual(expect.stringContaining('Intern'));
-})
