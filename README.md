@@ -10,7 +10,7 @@ This application enables users to create a profile of different team members bas
 
 - Walkthrough of app & generated HTML: https://drive.google.com/file/d/1OaQ8-_u4BvTktd2bAdc_V2iaxc63WNQD/view
 
-##Tests
+## Tests
 
 - Screenshot of tests:
 <img width="448" alt="image" src="https://user-images.githubusercontent.com/106932259/186784207-144197df-7e00-4342-852b-b56e7c936f94.png">
