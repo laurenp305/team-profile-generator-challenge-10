@@ -68,7 +68,7 @@ const addNewManager = () => {
         const  { name, id, email, officeNumber } = managerInput; 
         const manager = new Manager (name, id, email, officeNumber);
 
-        teamArray.push(manager); 
+        team.push(manager); 
         console.log(manager); 
     })
 };
@@ -174,15 +174,16 @@ const addNewEmployee = () => {
             console.log(employee);
         }
 
-        teamArray.push(employee); 
+        team.push(employee); 
 
         if (confirmAddNewEmployee) {
-            return addNewmployee(teamArray); 
+            return addNewmployee(team); 
         } else {
-            return teamArray;
+            return team;
         }
     })
 
 };
+
 
 

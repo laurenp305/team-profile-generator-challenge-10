@@ -72,7 +72,7 @@ createHTML = (data) => {
     }
 
 //combines strings 
-const teamCards = pageArray.join("");
+const teamCards = cardsArray.join("");
 
 //returns string to generated page 
 const generateTeam = createTeamPage(teamCards);
