@@ -9,6 +9,11 @@ const team = [];
 
 //prompts questions for users to answer in terminal
 function initApp() {
+    createHtml();
+    addTeamMember();
+}
+
+function addTeamMember() {
     inquirer.createPromptModule([{
         message: "What is the team member's name?",
         name: "Name",
@@ -39,7 +44,24 @@ function initApp() {
         } else { 
             roleType = "office number";
         }
-        
+        inquirer.createPromptModule([{
+            message: "What is the team member's " + roleType + "?",
+            name: "roleType"
+        },
+        {
+            type: "list",
+            message: "Would you like to add another team member?",
+            choices: [
+                "Yes",
+                "No"
+            ]
+            name: "moreMembers"
+        }])
+        .then(function({roleType, moreMembers}) {
+
+        }))
+    }])
+}
 
 // const createManager = () => {
 //     return inquirer.prompt([
