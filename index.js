@@ -7,6 +7,7 @@ const Engineer = require("./lib/Engineer");
 
 const team = [];
 
+//prompts questions for users to answer in terminal
 function initApp() {
     inquirer.createPromptModule([{
         message: "What is the team member's name?",
@@ -22,10 +23,14 @@ function initApp() {
         ],
         name: "Role"
     },
+    { 
+        message: "What is the team member's id?",
+        name: "Id"
+    },
     {
-    }])
-}
-
+        message: "What is the team member's email?",
+        name: "Email"
+    
 // const createManager = () => {
 //     return inquirer.prompt([
 //         {
