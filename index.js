@@ -16,7 +16,7 @@ function initApp() {
 function addTeamMember() {
     inquirer.createPromptModule([{
         message: "What is the team member's name?",
-        name: "Name",
+        name: "name",
     },
     {
         type: "list",
@@ -26,16 +26,16 @@ function addTeamMember() {
             "Engineer",
             "Intern"
         ],
-        name: "Role"
+        name: "role"
     },
     { 
         message: "What is the team member's id?",
-        name: "Id"
+        name: "id"
     },
     {
         message: "What is the team member's email?",
-        name: "Email"
-    }]).then(function(answers) {
+        name: "email"
+    }]).then(function({name, role, id, email}) {
         let roleType = "";
         if (role === "Engineer") {
             roleType = 'GitHub Username';
@@ -54,7 +54,7 @@ function addTeamMember() {
             choices: [
                 "Yes",
                 "No"
-            ]
+            ],
             name: "moreMembers"
         }])
         .then(function({roleType, moreMembers}) {
