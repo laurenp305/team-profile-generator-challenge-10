@@ -58,7 +58,14 @@ function addTeamMember() {
             name: "moreMembers"
         }])
         .then(function({roleType, moreMembers}) {
-
+            let newTeamMember;
+            if (role === "Engineer") {
+                newTeamMember = new Engineer(name, id, email, roleType);
+            } else if (role === "Intern") {
+                newTeamMember = new Intern(name, id, email, roleType);
+            } else { 
+                newTeamMember = new Manager(name, id, email, roleType);
+            }
         }))
     }])
 }
