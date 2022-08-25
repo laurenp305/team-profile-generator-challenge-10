@@ -32,4 +32,21 @@ const createEngineer = (engineer) => {
 </div>`
 }
 
+//creates Intern section/card
+const createIntern = (intern) => {
+    return `<div class="card">
+    <div class="card-header">
+        <h2>${intern.name}</h2>
+        <h3>${intern.title}</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: ${intern.id}</li>
+            <li class="list-group-item">Email: ${intern.email}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
+        </ul>
+    </div>
+</div>`
+}
+
 
