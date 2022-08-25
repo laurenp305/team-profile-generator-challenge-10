@@ -66,8 +66,17 @@ function addTeamMember() {
             } else { 
                 newTeamMember = new Manager(name, id, email, roleType);
             }
-        }))
-    }])
+            team.push(newTeamMember);
+            createHtml(newTeamMember)
+            .then(function() {
+                if (moreMembers === "Yes") {
+                    addTeamMember();
+                } else {
+                    completeHtml();
+                }
+            });
+        });
+    });
 }
 
 // const createManager = () => {
