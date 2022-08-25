@@ -111,7 +111,32 @@ fs.writeFile("./output/team.html", html, function(err) {
     console.log("Begin");
 }
 
+function addTeamMember(member) {
+    return new Promise(function(resolve, reject) {
+        const name = member.getName();
+        const role = member.getRole();
+        const id = member.getId();
+        const email = member.getEmail();
+        let data = "";
+        if (role === "Engineer") {
+            const gitHub = member.getGitHub();
+            data = `
+            <div class="col-4 mt-4">
+      <div class="card h-100">
+          <div class="card-header">
+              <h4>Engineer</h4><i class="material-icons"></i>
+          </div>
 
+          <div class="card-body">
+              <p class="id">ID: ${id}</p>
+              <p class="email">Email: ${email}</p>
+              <p class="github">Github: ${gitHub}</p>
+          </div>
+
+      </div>
+  </div>`
+))
+}
 
 
 
