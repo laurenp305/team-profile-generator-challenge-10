@@ -152,9 +152,31 @@ function addTeamMember(member) {
 
       </div>
   </div>`;
-        }
-))
-}
+        } else {
+            const officeNumber = member.getOfficeNumber();
+            data = `
+            <div class="col-4 mt-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h4>Manager</h4><i class="material-icons"></i>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: ${id}</p>
+                <p class="email">Email: ${email}</p>
+                <p class="office">Office Number: ${officeNumber}</p>
+            </div>
+  
+        </div>
+    </div>`;
+    }
+    console.log("Adding new team member");
+    fs.appendFile("./output/team.html", data, function(err) {
+        if (err) {
+            return console.log(err);
+        };
+        return resolve();
+        });
+    });
 
 
 
