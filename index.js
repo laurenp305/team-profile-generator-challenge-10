@@ -160,11 +160,11 @@ const addNewEmployee = () => {
     .then(employeeData => {
         // data for employee types 
 
-        let { name, id, email, role, github, school, confirmAddNewEmployee } = employeeData; 
+        let { name, id, email, role, gitHub, school, confirmAddNewEmployee } = employeeData; 
         let employee; 
 
         if (role === "Engineer") {
-            employee = new Engineer (name, id, email, github);
+            employee = new Engineer (name, id, email, gitHub);
 
             console.log(employee);
 
