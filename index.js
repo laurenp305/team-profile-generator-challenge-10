@@ -1,14 +1,10 @@
 //variables for different roles
 const inquirer = require("inquirer");
+const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
 
-const generateHTML = require("./src/createTeam.js");
-const fs = require("fs");
-const path = require("path");
-const outputDir = path.resolve(__dirname, "output");
-const outputPath = path.join(outputDir, "team.html");
 const team = [];
 
 const createManager = () => {
