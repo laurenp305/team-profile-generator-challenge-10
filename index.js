@@ -134,7 +134,25 @@ function addTeamMember(member) {
           </div>
 
       </div>
-  </div>`
+  </div>`;
+        } else if (role === "Intern") {
+            const school = member.getSchool();
+            data = `
+            <div class="col-4 mt-4">
+      <div class="card h-100">
+          <div class="card-header">
+              <h4>Intern</h4><i class="material-icons"></i>
+          </div>
+
+          <div class="card-body">
+              <p class="id">ID: ${id}</p>
+              <p class="email">Email: ${email}</p>
+              <p class="school">School: ${school}</p>
+          </div>
+
+      </div>
+  </div>`;
+        }
 ))
 }
 
