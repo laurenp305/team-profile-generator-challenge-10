@@ -178,7 +178,22 @@ function addTeamMember(member) {
         });
     });
 
+}
+function completeHtml() {
+    const html = `
+        </div>
+        </div>
+</body>
+</html>`;
+    fs.appendFile("./output/team.html", html, function(err) {
+        if (err) {
+            return console.log(err);
+    };
+});
+console.log(err);
+}
 
+initApp();
 
 // const createManager = () => {
 //     return inquirer.prompt([
