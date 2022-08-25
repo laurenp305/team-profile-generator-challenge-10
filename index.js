@@ -111,7 +111,7 @@ fs.writeFile("./output/team.html", html, function(err) {
     console.log("Begin");
 }
 
-function addTeamMember(member) {
+function newTeamMember(member) {
     return new Promise(function(resolve, reject) {
         const role = member.getRole();
         const name = member.getName();
