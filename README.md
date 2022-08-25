@@ -3,7 +3,13 @@
 ## Description
 This application enables users to create a profile of different team members based on user input collected using the Inquirer module from Node.js. This application creates a new HTML that displays the information using the user's input.
 
-## Screenshot of Generated HTML
+## Table of Contents
+- Screenshot (#screenshot)
+- Links (#links)
+- Tests (#tests)
+- Questions (#questions)
+
+## Screenshot
 <img width="777" alt="image" src="https://user-images.githubusercontent.com/106932259/186784150-5476dee4-a7b4-45dc-bb7b-826dc9f7a4f8.png">
 
 ## Links to Demo/Video of App
