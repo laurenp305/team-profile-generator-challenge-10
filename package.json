@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/laurenp305/team-profile-generator-challenge-10#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^7.1.0"
   },
   "devDependencies": {
     "jest": "^28.1.3"
