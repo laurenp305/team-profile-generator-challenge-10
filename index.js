@@ -30,7 +30,17 @@ function initApp() {
     {
         message: "What is the team member's email?",
         name: "Email"
-    
+    }]).then(function(answers) {
+        let roleType = "";
+        if (role === "Engineer") {
+            roleType = 'GitHub Username';
+        } else if (role === "Intern") {
+            roleType = 'School';
+        } else { 
+            roleType = "office number";
+        }
+        
+
 // const createManager = () => {
 //     return inquirer.prompt([
 //         {
