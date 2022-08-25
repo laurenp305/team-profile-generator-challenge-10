@@ -43,3 +43,87 @@ function generateManagerHtml(manager) {
     `;
 }
 
+function generateRestOfTeam({ otherTeam }) {
+    let mainString = "";
+  
+    otherTeam.forEach((employee) => {
+      if (employee.userSelection === "Add an engineer") {
+        const myEngineer = new Engineer(
+          employee.engineerName,
+          employee.engineerId,
+          employee.engineerEmail,
+          employee.engineerGithub
+        );
+        let engineerString = `
+          <div class="card text-bg-primary mb-3" style="width: 18rem">
+              <div class="card-header">
+              <i class="fa-solid fa-laptop-code" aria-hidden="true">Engineer ${myEngineer.engineerName}</i>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${myEngineer.engineerId}</li>
+              <li class="list-group-item">Email: ${myEngineer.engineerEmail} </li>
+              <li class="list-group-item">GitHub: ${myEngineer.engineerGithub}</li>
+          </ul>
+          </div>
+              `;
+
+          mainString += engineerString 
+
+      } else   {(employee.userSelection === "Add an Intern")
+         const myIntern = new Intern (
+          employee.internName,
+          employee.internID,
+          employee.internEmail,
+          employee.internSchool
+         )
+  
+          let internString = `
+
+<div class="col-4 mt-4">
+      <div class="card h-100">
+          <div class="card-header">
+              <h4>Intern</h4><i class="material-icons"></i>
+          </div>
+
+          <div class="card-body">
+            <li class="list-group-item">ID: ${employee.internID}</li>
+            <li class="list-group-item">Email: ${employee.internEmail}</li>
+            <li class="list-group-item">School: ${employee.internSchool}</li>
+          </div>
+    </div>
+</div>
+
+</body>
+      </html>
+          `
+         
+mainString+= internString
+      }
+    });
+  
+    // return mainString
+    return `
+          
+      `;
+  }
+  
+  module.exports = (userAnsw) => {
+    const {
+      managerName,
+      managerId,
+      managerEmail,
+      managerOfficeNumber,
+      ...employeesObject
+    } = userAnsw;
+    const myManager = new Manager(
+      managerName,
+      managerId,
+      managerEmail,
+      managerOfficeNumber
+    );
+    return `
+      ${generateManagerHtml(myManager)}
+      ${generateRestOfTeam(employeesObject)}
+    `;
+  
+  };
